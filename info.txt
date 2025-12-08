@@ -4,3 +4,16 @@ MERN Stack - Application, Backend Development, Frontend Development }-> Full Sta
 industry app ->google chrome, url
 
 enterprise app->wholistic app
+
+HTML-Hypertext Markup Language - It is framework of webpage
+CSS - Casdaing Style Sheet - It is used to style webpage
+Types of CSS
+1. Inline - priority 1
+2. Internal - priority 2
+3. External - priority 3
+
+Selectors
+1. Element->h2,h3 etc
+2. Class ->.content etc
+3. Id -> #about
+4. Universal Selectors ->*

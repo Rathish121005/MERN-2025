@@ -1,0 +1,69 @@
+.navigation
+{
+    margin-right: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    gap:40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    color: white;
+    padding: 0;
+    top: 0;
+    right: 0;
+    background-color: black;
+    width: 100%;
+    
+}
+.content
+{
+    color: white;
+    border-left: 0.2rem solid green;
+    border-top: 0.2rem solid green;
+    border-right: 0.2rem solid green;
+    border-bottom: 0.2rem solid green;
+    border-radius: 1.2rem;
+    margin-top: 4rem;
+    margin-left: 16rem;
+    margin-right: 8rem;
+    margin-bottom: 4rem;
+    width: 65rem;
+    height: 10rem;
+    padding-left: 7rem;
+    padding-top: 2rem;
+    padding-right: 3rem;
+}
+.about
+{
+    color: white;
+    border-left: 0.2rem solid green;
+    border-top: 0.2rem solid green;
+    border-right: 0.2rem solid green;
+    border-bottom: 0.2rem solid green;
+    border-radius: 1.2rem;
+    margin-top: 0.2rem;
+    margin-left: 16rem;
+    margin-right: 8rem;
+    margin-bottom: 4rem;
+    width: 65rem;
+    height: 10rem;
+    padding-left: 7rem;
+    padding-top: 2rem;
+    padding-right: 3rem;
+}
+
+
+body
+{
+    background-color: black;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+h1
+{
+    
+    font-family: 'Times New Roman', Times, serif;
+    
+}
