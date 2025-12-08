@@ -95,3 +95,11 @@ class Person
 }
 var person1=new Person("ARRaj",20);
 person1.display();
+
+
+var a=12;
+if(true)
+{
+    console.log(a);
+}
+console.log(a);
