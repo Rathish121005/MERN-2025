@@ -103,3 +103,10 @@ if(true)
     console.log(a);
 }
 console.log(a);
+
+var z;
+console.log(z);
+var z=15;
+console.log(z);
+
+
