@@ -110,3 +110,19 @@ var z=15;
 console.log(z);
 
 
+var obj={name:"ARRaj",
+    age:20,
+    phone:9042915939,
+    email:"aarockyarathishraj2005@gmail.com",
+    address:{
+        houseno:"1/284A",
+        street:"Middle Street",
+        city:"Silaiman",
+        district:"Madurai",
+        pincode:625201,
+    }
+}
+for(let i in obj)
+{
+    console.log(i,obj[i]);
+}
