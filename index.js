@@ -39,6 +39,42 @@ while(i<=10)
     console.log(i);
     i++;
 }
+switch(1)
+{
+    case 1:
+        console.log("1");
+        break;
+    case 2:
+        console.log("2");
+        break;
+    default:
+        console.log("default");
+        break;
+}
+mark=90;
+var result=mark>=90?"O":mark>=70?"A":mark>=50?"B":"Fail";
+console.log(result);
 
+function add()
+{
+    console.log(a+b);
+}
+add();
+function add(a,b)
+{
+    console.log(a+b);
+}
+add(12,10);
 
+var add=(a,b)=>console.log(a+b);
+add(12, 10);
+add();
 
+var arr1=[12,10,5,20,11,14,8,99,21,1];
+for(let i in arr1)
+{
+    console.log(arr1[i]);
+}
+arr1.forEach((i)=>console.log(i));
+
+arr1.forEach((val,index)=>console.log(val,index));
