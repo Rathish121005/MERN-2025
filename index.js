@@ -78,3 +78,20 @@ for(let i in arr1)
 arr1.forEach((i)=>console.log(i));
 
 arr1.forEach((val,index)=>console.log(val,index));
+
+class Person
+{
+    name;
+    age;
+    constructor(name,age)
+    {
+        this.name=name;
+        this.age=age;
+    }
+    display()
+    {
+        console.log(this.name, this.age);
+    }
+}
+var person1=new Person("ARRaj",20);
+person1.display();
