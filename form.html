@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Application Form</h1>
+    <form>
     <label>Name:</label>
     <input type="text" id="name" placeholder="Enter Name" required><br>
     <label>Age:</label>
@@ -15,17 +16,35 @@
     <input type="email" id="email" placeholder="Enter Email" required><br>
     <label>Phone:</label>
     <input type="tel" id="Phone" placeholder="Enter Phone Number" required><br>
+    <label>Username:</label>
+    <input type="text" id="Username" placeholder="Enter Username" required><br>
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Enter Password" required><br>
     <button type="submit" id="submit">Submit</button>
+    </form>
 
     <script>
         
-        document.getElementById("submit").addEventListener("click",()=>{
+        document.getElementById("submit").addEventListener("click",(e)=>{
+             e.preventDefault();
             var name=document.getElementById("name").value;
             var age=document.getElementById("age").value;
             var email=document.getElementById("email").value;
             var phone=document.getElementById("Phone").value;
-            alert("Form Submitted Successfully");
-            console.log(`Name: ${name} Age: ${age} Email: ${email} Phone: ${phone}`);
+            var username=document.getElementById("Username").value;
+            var password=document.getElementById("password").value;
+            if(username.toLowerCase()==="aarockyarathishraj2005@gmail.com" && password.toLowerCase()==="rathish")
+        {
+                alert("Form Submitted Successfully");
+                console.log(`Name: ${name} Age: ${age} Email: ${email} Phone: ${phone} Username: ${username} Password: ${password}`);
+        }
+        else
+        {
+            alert("Invalid Credentials");
+            console.log("Invalid Credentials");
+        }
+            
+            
             
         });
        

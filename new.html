@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para" class="fontsize"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nulla corrupti minima officiis dicta consequatur iure voluptates ut, ipsa quasi minus odio dolores, a magnam vitae! Cumque, dicta eius. Adipisci?</p>
+    <button id="submit" onclick="increase()">Click</button>
+    <button id="reset">Reset</button>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <script>
+        var fontSize=10;
+        function increase(){
+            
+            fontSize+=10;
+            document.getElementById("para").style.fontSize=fontSize+"px";
+        };
+        document.getElementById("reset").addEventListener("click",()=>{
+            document.getElementById("para").style.fontSize="10px";
+        })
+        
+        document.getElementById("hide").addEventListener("click",()=>{
+            document.getElementById("para").style.display="none";
+        });
+
+        
+        document.getElementById("show").addEventListener("click",()=>{
+            document.getElementById("para").style.display=null;
+        });
+    </script>
+
+
+</body>
+</html>

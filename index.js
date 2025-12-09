@@ -174,3 +174,33 @@ var totalmarks=student.reduce((sum,i)=>(sum+i.marks),0);
 console.log(totalmarks);
 
 
+const promise=new Promise((resolve, reject)=>{
+   var success=true;
+   if(success)
+   {
+       resolve("success");
+   }
+   else
+   {
+        reject("failed");
+   }
+});
+
+promise.then((msg)=>
+    console.log(msg)).catch((msg)=>
+    console.log(msg));
+
+
+const getData=()=>{
+    return fetch('https://jsonplaceholder.typicode.com/posts');
+}
+getData().then((response)=>response.json()).then((data)=>console.log(data)).catch((err)=>console.log(err));
+
+
+const getData1=async(req,res)=>{
+    var res=await fetch('https://jonplaceholder.typicode.com/posts');
+    var data =await res.json();
+    console.log(data);
+}
+
+getData1();
