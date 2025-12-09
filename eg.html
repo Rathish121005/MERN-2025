@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="msg">hello</p>
+    <p class="item">One</p>
+    <p class="item">Two</p>
+    <ul id="list">
+        <p id="num">0</p>
+        <button id =inc>Increment</button>
+        <button id="dec">Decrement</button>
+        <button id="reset">Reset</button>
+
+    </ul>
+<div>
+    <p id="name"></p>
+    <input type="text" id="inp" placeholder="Enter Name">
+        <button id="submit" onclick="submitted()">Click here</button>
+    </div>
+    
+
+<script>
+    /*document.getElementById("msg").style.color="red";
+    var item=document.getElementsByClassName("item");
+    item[0].style.color="blue";
+    document.querySelector("#msg").style.backgroundColor="black";
+    document.getElementById("msg").innerText="List"; */
+    document.getElementById("submit").addEventListener("click",()=>{
+        document.getElementById("msg").innerHTML="List";
+    });
+    var newitem=document.createElement("Three");
+
+    document.getElementById("list").append(newitem);
+    var submitted=()=>{
+        alert("Button clicked");
+    }
+    document.getElementById("submit").addEventListener("click",()=>{
+        var text=document.getElementById("inp").value;
+        document.getElementById("name").innerHTML="Rathish";
+    })
+    var count=0;
+    document.getElementById("inc").addEventListener("click",()=>{
+        
+        count+=1;
+        document.getElementById("num").innerHTML=count;
+    });
+  
+    document.getElementById("inc").addEventListener("keyUp",()=>{
+        count+=1;
+        document.getElementById("num").innerHTML=count;
+    });
+    
+
+    document.getElementById("dec").addEventListener("click",()=>{
+        count-=1;
+        document.getElementById("num").innerHTML=count;
+    });
+    document.getElementById("reset").addEventListener("click",()=>{
+        count=0;
+        document.getElementById("num").innerHTML=count;
+    });
+
+
+   
+</script>
+</body>
+</html>

@@ -126,3 +126,51 @@ for(let i in obj)
 {
     console.log(i,obj[i]);
 }
+
+var age =20;
+var str=`Rathish age is ${age}`;
+console.log(str);
+
+var str =`Mani age is ${age-1}`;
+console.log(str);
+
+str=`Elango age is ${age-2}`;
+console.log(str);
+
+
+var arr=[12,10,5];
+var arr2=arr.map((i)=>{
+    return i*2;
+});
+console.log(arr);
+console.log(arr2);
+
+var even=arr.filter((i)=>i%2===0)
+console.log(even);
+
+var add=arr.reduce((sum,i)=>(sum+i),0);
+console.log(add);
+
+var evencount=arr.map((i,count=0)=>{
+    i%2===0?count++:count;
+    return count;
+});
+console.log(evencount);
+
+var student=[
+    {name:"ARRaj",
+    marks:89},
+    {name:"Elango",marks:100},
+    {name:"Mani",marks:99},
+]
+
+var studentMarks=student.filter((i)=>{return i.marks>90;});
+
+console.log(studentMarks);
+
+
+
+var totalmarks=student.reduce((sum,i)=>(sum+i.marks),0);
+console.log(totalmarks);
+
+
