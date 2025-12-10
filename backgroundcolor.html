@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body id="bg">
+    <p id="para">Hi</p>
+    <button id="change">Click to change</button><br><br>
+    <p id="num">0</p>
+    <button id="inc" onclick="increase()">Increment</button>   
+    <button id="dec" onclick="decrease()">Decrement</button>  
+    <button onclick="reset()">Reset</button><br><br>
+
+    <input type="password" id="password" placeholder="Enter Password">
+    <p id="eye" style="cursor: pointer;">👁️</p><br><br>
+
+
+
+    <input type="text" id="text" placeholder="Enter Text">
+    <p id="count">0</p><br><br>
+
+    <input type="text" id="text1" placeholder="Enter text">
+    <p id="view"></p>
+    <button id="showtext">Click</button><br><br>
+
+    <input type="number" id="num1">  
+    <input type="number" id="num2"><br>
+    <button id="add">+</button>  
+    <button id="sub">-</button>   
+    <button id="mul">*</button>  
+    <button id="div">/</button> 
+    <p id="result"></p><br><br>
+
+    <img src="Avengers.jpg" id="imagea" width="100" height="50">
+
+
+    <button id="red" tabindex="0">Red</button>  
+    <button id="blue" tabindex="0">Blue</button>  
+    <button id="green" tabindex="0">Green</button>
+    <button id="reset" tabindex="0">Reset</button>
+    <script>
+        document.addEventListener("keydown",function(event){
+            var key=event.key.toLowerCase();
+
+            if(key==='r')
+               document.getElementById("bg").style.background="Red";
+        });
+
+        document.getElementById("showtext").addEventListener("click",()=>{
+            let text=document.getElementById("text1").value;
+            document.getElementById("view").innerHTML=text;
+        });
+
+        document.getElementById("change").addEventListener("click",()=>{
+            document.getElementById("para").innerHTML="Hello javascript";
+        });
+        document.getElementById("change").addEventListener("dblclick",()=>{
+            document.getElementById("para").innerHTML="Hi";
+        });
+
+        var count=0;
+        function increase(){
+            count+=1;
+            document.getElementById("num").innerHTML=count;
+        }
+        function decrease()
+        {
+            count-=1;
+            document.getElementById("num").innerHTML=count;
+        }
+        function reset()
+        {
+            count=0;
+            document.getElementById("num").innerHTML=count;
+        }
+        
+        document.getElementById("eye").addEventListener("click",()=>{
+            let password=document.getElementById("password");
+            if(password.type==="password")
+        {
+            password.type="text";
+        }
+        else if(password.type==="text")
+        {
+            password.type="password";
+        }
+        else
+        {
+            password.type=password;
+        }
+            
+        })
+
+        document.getElementById("text").addEventListener("keyup",function(event){
+            var count=this.value.length;
+           
+        document.getElementById("count").textContent="Characters: "+count;
+        })
+
+        document.addEventListener("keydown",function(event){
+            var key=event.key.toLowerCase();
+            if(key==='b')
+               document.getElementById("bg").style.background="blue";
+        });
+
+        document.addEventListener("keydown",function(event){
+            var key=event.key.toLowerCase();
+
+            if(key==='g')
+                document.getElementById("bg").style.background="green";
+        });
+
+        document.addEventListener("keydown",function(event){
+
+            var key =event.key.toLowerCase();
+            if(key==='backspace')
+            document.getElementById("bg").style.background="white";
+        });
+
+        document.getElementById("red").addEventListener("click",()=>{
+               document.getElementById("bg").style.background="Red";
+        });
+
+        document.getElementById("blue").addEventListener("click",()=>{
+               document.getElementById("bg").style.background="blue";
+        });
+
+        document.getElementById("green").addEventListener("click",()=>{
+                document.getElementById("bg").style.background="green";
+        });
+
+        document.getElementById("reset").addEventListener("click",()=>{
+            document.getElementById("bg").style.background="white";
+        });
+
+        document.getElementById("add").addEventListener("click",()=>{
+            let num1=document.getElementById("num1").value;
+            let num2=document.getElementById("num2").value;
+            document.getElementById("result").innerHTML=num1+num2;
+
+        });
+
+        document.addEventListener("keypress",function(event){
+            let key=event.key.toLowerCase();
+            if(key==="+")
+        {
+            let num1=document.getElementById("num1").value;
+            let num2=document.getElementById("num2").value;
+            document.getElementById("result").innerHTML=parseInt(num1)+parseInt(num2);
+        }
+        });
+
+        document.getElementById("sub").addEventListener("click",()=>{
+            let num1=document.getElementById("num1").value;
+            let num2=document.getElementById("num2").value;
+            document.getElementById("result").innerHTML=num1-num2;
+
+        });
+
+        document.addEventListener("keypress",function(event){
+            let key=event.key.toLowerCase();
+            if(key==="-")
+        {
+            let num1=document.getElementById("num1").value;
+            let num2=document.getElementById("num2").value;
+            document.getElementById("result").innerHTML=num1-num2;
+        }
+        });
+
+         document.getElementById("mul").addEventListener("click",()=>{
+            let num1=document.getElementById("num1").value;
+            let num2=document.getElementById("num2").value;
+            document.getElementById("result").innerHTML=num1*num2;
+
+        });
+
+        document.addEventListener("keypress",function(event){
+            let key=event.key.toLowerCase();
+            if(key==="*")
+        {
+            let num1=document.getElementById("num1").value;
+            let num2=document.getElementById("num2").value;
+            document.getElementById("result").innerHTML=num1*num2;
+        }
+        });
+
+        document.getElementById("div").addEventListener("click",()=>{
+            let num1=document.getElementById("num1").value;
+            let num2=document.getElementById("num2").value;
+            document.getElementById("result").innerHTML=num1/num2;
+
+        });
+
+         document.addEventListener("keypress",function(event){
+            let key=event.key.toLowerCase();
+            if(key==="/")
+        {
+            let num1=document.getElementById("num1").value;
+            let num2=document.getElementById("num2").value;
+            document.getElementById("result").innerHTML=num1/num2;
+        }
+        });
+
+        let img=document.getElementById("imagea");
+        img.addEventListener("mouseover",function()
+        {
+            img.src="imageb.png";
+        });
+
+        img.addEventListener("mouseout",function(){
+            img.src="Avengers.jpg";
+        });
+        
+
+        
+    </script>
+</body>
+</html>

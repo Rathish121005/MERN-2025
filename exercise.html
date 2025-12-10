@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="color">
+        <option value="white">Select</option>
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select><br><br>
+
+
+    <input type="text" id="text" placeholder="Enter Text"><br><br>
+
+    
+
+    <input type="text" id="text1" placeholder="Enter Text">
+    <button id="submit" disabled>Submit</button><br><br>
+
+    <h2 id="clock"></h2><br>
+
+    <p id="count"></p>  
+    <button id="counter">Double Click</button><br><br>
+
+    <img src="Avengers.jpg" id="image1" width="100" height="100">
+    <button id="previous">⬅️</button>    <button id="next">➡️</button><br><br>
+
+    <p id="output"></p>
+    <input type ="text" id="text2" placeholder="Enter Text"><br><br>
+
+    <input type="number" id="celcius" placeholder="Enter Celcius">  <button id="calculate">Calculate</button>
+    <p id="fahrenheit"></p><br><br>
+
+    <p id="random"></p>   <button id="quote">Click</button><br><br>
+
+    
+
+    <script>
+        document.getElementById("color").addEventListener("change",function(){
+            document.body.style.background=this.value;
+            
+        });
+
+        document.getElementById("text").addEventListener("input",function(){
+            this.value=this.value.toUpperCase();
+        });
+
+        document.getElementById("text1").addEventListener("input",function(){
+            let button=document.getElementById("submit")
+            if(this.value.length>=1)
+        {
+            button.disabled=false;
+        }
+        else
+        {
+            button.disabled=true;
+        }
+        });
+        function updateclock(){
+            let now=new Date;
+            let time=now.toLocaleTimeString();
+            document.getElementById("clock").textContent=time;
+
+            setInterval(updateclock,1000);
+        }
+        updateclock();
+
+        var count=0;
+        document.getElementById("counter").addEventListener("dblclick",()=>{
+            count+=1;
+            document.getElementById("count").textContent=count;
+        });
+
+        let images=["Avengers.jpg","imageb.png"];
+        let i=0;
+
+        document.getElementById("previous").addEventListener("click",function(){
+            i--;
+            if(i<0)
+        {
+            i=images.length-1;
+        }
+        document.getElementById("image1").src=images[i];
+        });
+
+        document.getElementById("next").addEventListener("click",()=>{
+            i++;
+            if(i>=images.length){
+                i=0;
+            }
+            document.getElementById("image1").src=images[i];
+        });
+        var count=0;
+        document.getElementById("text2").addEventListener("keyup",function(event){
+            count=this.value.length;
+            document.getElementById("output").textContent=count;
+        });
+
+
+        document.getElementById("calculate").addEventListener("click",()=>{
+            let c=document.getElementById("celcius").value;
+            let f=c*(9/5)+32;
+            document.getElementById("fahrenheit").textContent=f;
+        });
+
+        document.getElementById("quote").addEventListener("click",()=>{
+            var arr1=["hi","hello","how are you","bye"];
+            let r=arr1[Math.floor(Math.random()*4)];
+            document.getElementById("random").textContent=r;
+        })
+
+
+        
+
+        
+
+
+
+    </script>
+</body>
+</html>
