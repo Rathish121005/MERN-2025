@@ -17,3 +17,20 @@ Selectors
 2. Class ->.content etc
 3. Id -> #about
 4. Universal Selectors ->*
+
+
+React
+1. Component style architecture
+2. Coding is bit easy than other frameworks
+3. React is not a framework architecture instead it is a library
+
+
+How to work with React
+1. Install the library
+        i. create react - it install slow
+        ii. vite - it install fast
+2. click on y to proceed
+3. type your project name
+4. Select type of project
+5. vite ->js+swc
+6. To install dependency 
